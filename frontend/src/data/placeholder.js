@@ -1,0 +1,315 @@
+// Placeholder business data for MVP
+export const businesses = [
+  {
+    id: 1,
+    name: "Applebee's",
+    address: "123 Main St",
+    city: "Austin",
+    state: "TX",
+    zip: "78701",
+    category: "Restaurant",
+    seating_notes: "Booths are tight, chairs have arms, tables close together",
+    seat_types: "booths, chairs with arms, tables",
+    photo_url: null,
+    verified: false,
+    owner_id: null,
+    created_at: "2024-01-15T12:00:00Z",
+    tags: ["Booths are tight", "Chairs have arms", "Tables close together"],
+    reviews: [
+      {
+        id: 1,
+        user_id: 1,
+        user_name: "Sam J.",
+        star_rating: 3,
+        seat_type: "booth",
+        felt_comfortable: false,
+        felt_sturdy: true,
+        staff_accommodating: true,
+        tips: "Ask for a table instead of a booth - much more comfortable.",
+        body_context: "I usually need armless chairs",
+        date_visited: "2024-02-10",
+        photo_url: null,
+        helpful_count: 5,
+        created_at: "2024-02-12T10:30:00Z",
+        scores: { chair_width_score: 3, chair_sturdiness_score: 4, booth_comfort_score: 2, armrest_friendliness: 2, table_spacing_score: 3, movable_seating_score: 3, would_go_again_score: 3 }
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: "AMC Barton Creek",
+    address: "4400 Amelia Earhart Dr",
+    city: "Austin",
+    state: "TX",
+    zip: "78701",
+    category: "Movie Theater",
+    seating_notes: "Seats are wide and sturdy, cup holders are tight",
+    seat_types: "recliners, standard seats",
+    photo_url: null,
+    verified: false,
+    owner_id: null,
+    created_at: "2024-01-16T12:00:00Z",
+    tags: ["Seats are wide", "Seats feel sturdy", "Cup holders are tight"],
+    reviews: [
+      {
+        id: 2,
+        user_id: 2,
+        user_name: "Taylor M.",
+        star_rating: 4,
+        seat_type: "recliner",
+        felt_comfortable: true,
+        felt_sturdy: true,
+        staff_accommodating: true,
+        tips: "The recliner seats are very spacious and comfortable.",
+        body_context: "I usually need wide seats",
+        date_visited: "2024-02-08",
+        photo_url: null,
+        helpful_count: 3,
+        created_at: "2024-02-09T14:20:00Z",
+        scores: { chair_width_score: 5, chair_sturdiness_score: 5, booth_comfort_score: 4, armrest_friendliness: 3, table_spacing_score: 3, movable_seating_score: 4, would_go_again_score: 4 }
+      }
+    ]
+  },
+  {
+    id: 3,
+    name: "The Curl Studio",
+    address: "456 Oak Ave",
+    city: "Austin",
+    state: "TX",
+    zip: "78702",
+    category: "Salon",
+    seating_notes: "Salon chairs are wide, staff is accommodating",
+    seat_types: "salon chairs",
+    photo_url: null,
+    verified: false,
+    owner_id: null,
+    created_at: "2024-01-17T12:00:00Z",
+    tags: ["Chairs feel sturdy", "Staff is accommodating", "Spacious seating"],
+    reviews: [
+      {
+        id: 3,
+        user_id: 3,
+        user_name: "Jordan P.",
+        star_rating: 5,
+        seat_type: "salon chair",
+        felt_comfortable: true,
+        felt_sturdy: true,
+        staff_accommodating: true,
+        tips: "They have extra wide salon chairs and the stylists are very body-positive.",
+        body_context: "I usually need wide seats",
+        date_visited: "2024-02-05",
+        photo_url: null,
+        helpful_count: 7,
+        created_at: "2024-02-06T09:15:00Z",
+        scores: { chair_width_score: 5, chair_sturdiness_score: 5, booth_comfort_score: 4, armrest_friendliness: 4, table_spacing_score: 4, movable_seating_score: 4, would_go_again_score: 5 }
+      }
+    ]
+  },
+  {
+    id: 4,
+    name: "Austin Family Medicine",
+    address: "789 Health Blvd",
+    city: "Austin",
+    state: "TX",
+    zip: "78703",
+    category: "Medical Office",
+    seating_notes: "Waiting room chairs are armless, comfortable",
+    seat_types: "armless chairs, padded benches",
+    photo_url: null,
+    verified: false,
+    owner_id: null,
+    created_at: "2024-01-18T12:00:00Z",
+    tags: ["Armless chairs available", "Chairs feel sturdy", "Spacious seating"],
+    reviews: []
+  },
+  {
+    id: 5,
+    name: "Marriott Downtown",
+    address: "100 Congress Ave",
+    city: "Austin",
+    state: "TX",
+    zip: "78701",
+    category: "Hotel",
+    seating_notes: "Lobby seating is spacious, bar stools are tight",
+    seat_types: "lounge chairs, sofas, bar stools",
+    photo_url: null,
+    verified: false,
+    owner_id: null,
+    created_at: "2024-01-19T12:00:00Z",
+    tags: ["Lounge seating is good", "Bar stools are tight"],
+    reviews: [
+      {
+        id: 4,
+        user_id: 2,
+        user_name: "Taylor M.",
+        star_rating: 4,
+        seat_type: "lounge chair",
+        felt_comfortable: true,
+        felt_sturdy: true,
+        staff_accommodating: true,
+        tips: "The lobby sofas are great - very deep and comfortable.",
+        body_context: "I prefer sofas over chairs",
+        date_visited: "2024-01-25",
+        photo_url: null,
+        helpful_count: 2,
+        created_at: "2024-01-26T16:00:00Z",
+        scores: { chair_width_score: 4, chair_sturdiness_score: 4, booth_comfort_score: 4, armrest_friendliness: 4, table_spacing_score: 4, movable_seating_score: 3, would_go_again_score: 4 }
+      }
+    ]
+  },
+  {
+    id: 6,
+    name: "Blue Velvet Café",
+    address: "321 Elm St",
+    city: "Austin",
+    state: "TX",
+    zip: "78704",
+    category: "Café",
+    seating_notes: "Outdoor seating is best, chairs feel sturdy",
+    seat_types: "wooden chairs, outdoor benches, armchairs",
+    photo_url: null,
+    verified: false,
+    owner_id: null,
+    created_at: "2024-01-20T12:00:00Z",
+    tags: ["Chairs feel sturdy", "Outdoor seating is spacious"],
+    reviews: []
+  },
+  {
+    id: 7,
+    name: "Southside Bar & Grill",
+    address: "555 River Rd",
+    city: "Austin",
+    state: "TX",
+    zip: "78704",
+    category: "Bar",
+    seating_notes: "Bar stools not plus-size friendly, booths are comfortable",
+    seat_types: "bar stools, booths, high tops",
+    photo_url: null,
+    verified: false,
+    owner_id: null,
+    created_at: "2024-01-21T12:00:00Z",
+    tags: ["Booths are comfortable", "Bar stools are tight"],
+    reviews: [
+      {
+        id: 5,
+        user_id: 1,
+        user_name: "Sam J.",
+        star_rating: 3,
+        seat_type: "booth",
+        felt_comfortable: true,
+        felt_sturdy: true,
+        staff_accommodating: false,
+        tips: "Stick to the booths - they're roomy. Skip the bar stools entirely.",
+        body_context: "I usually need armless chairs",
+        date_visited: "2024-01-30",
+        photo_url: null,
+        helpful_count: 4,
+        created_at: "2024-01-31T11:00:00Z",
+        scores: { chair_width_score: 2, chair_sturdiness_score: 3, booth_comfort_score: 4, armrest_friendliness: 3, table_spacing_score: 3, movable_seating_score: 2, would_go_again_score: 3 }
+      }
+    ]
+  },
+  {
+    id: 8,
+    name: "Lakeview Event Venue",
+    address: "200 Lake Dr",
+    city: "Austin",
+    state: "TX",
+    zip: "78705",
+    category: "Event Venue",
+    seating_notes: "Movable seating, tables are spacious",
+    seat_types: "folding chairs, banquet chairs, round tables",
+    photo_url: null,
+    verified: false,
+    owner_id: null,
+    created_at: "2024-01-22T12:00:00Z",
+    tags: ["Movable seating", "Tables are spacious"],
+    reviews: []
+  },
+  {
+    id: 9,
+    name: "First Community Church",
+    address: "400 Faith Way",
+    city: "Austin",
+    state: "TX",
+    zip: "78703",
+    category: "Church",
+    seating_notes: "Pews are tight, waiting area has armless chairs",
+    seat_types: "pews, armless chairs",
+    photo_url: null,
+    verified: false,
+    owner_id: null,
+    created_at: "2024-01-23T12:00:00Z",
+    tags: ["Pews are tight", "Armless chairs available"],
+    reviews: []
+  }
+];
+
+export const categories = [
+  "Restaurant",
+  "Movie Theater",
+  "Salon",
+  "Medical Office",
+  "Hotel",
+  "Café",
+  "Bar",
+  "Event Venue",
+  "Church",
+  "Retail Store",
+  "Airport",
+  "Sports Venue",
+  "Concert Hall",
+  "Other"
+];
+
+export const seatingTags = [
+  "Booths are tight",
+  "Booths are comfortable",
+  "Chairs have arms",
+  "Armless chairs available",
+  "Chairs feel sturdy",
+  "Chairs feel flimsy",
+  "Seats are wide",
+  "Seats are narrow",
+  "Bar stools are tight",
+  "Tables close together",
+  "Tables are spacious",
+  "Cup holders are tight",
+  "Movable seating",
+  "Staff is accommodating",
+  "Spacious seating",
+  "Outdoor seating is spacious"
+];
+
+export const bodyContextOptions = [
+  "I usually need wide seats",
+  "I usually need armless chairs",
+  "I usually need sturdy chairs",
+  "I prefer sofas over chairs",
+  "I need extra leg room",
+  "I prefer booths over chairs",
+  "I'm comfortable in most standard seats"
+];
+
+export const seatTypeOptions = [
+  "booth",
+  "chair with arms",
+  "armless chair",
+  "recliner",
+  "bar stool",
+  "sofa/couch",
+  "bench",
+  "folding chair",
+  "salon chair",
+  "outdoor seating",
+  "high top",
+  "pew"
+];
+
+export const currentUser = {
+  id: 1,
+  name: "Sam J.",
+  email: "sam@example.com",
+  role: "admin",
+  avatar: null
+};
