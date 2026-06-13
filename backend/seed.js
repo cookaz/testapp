@@ -1,9 +1,5 @@
-const Database = require('better-sqlite3');
-const path = require('path');
+const { initDb, api: db } = require('./db');
 const bcrypt = require('bcryptjs');
-
-const dbPath = path.join(__dirname, 'pluscheck.db');
-const db = new Database(dbPath);
 
 const businesses = [
   { name: "Applebee's", city: 'Austin', state: 'TX', category: 'Restaurant', address: '123 Main St', zip: '78701', seating_notes: 'Booths are tight, chairs have arms, tables close together', seat_types: 'booths, chairs with arms', tags: ['Booths are tight', 'Chairs have arms'] },
@@ -17,7 +13,9 @@ const businesses = [
   { name: 'First Community Church', city: 'Austin', state: 'TX', category: 'Church', address: '404 Grace Ln', zip: '78701', seating_notes: 'Pews are tight, waiting area has armless chairs', seat_types: 'pews, armless chairs', tags: ['Pews are tight', 'Armless chairs'] },
 ];
 
-const seed = () => {
+const seed = async () => {
+  await initDb();
+
   const adminPassword = bcrypt.hashSync('admin123', 10);
   const userPassword = bcrypt.hashSync('user123', 10);
 
@@ -83,7 +81,7 @@ const seed = () => {
   });
 
   console.log('Seed data inserted.');
+  db.close();
 };
 
 seed();
-db.close();

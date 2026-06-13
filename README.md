@@ -4,7 +4,7 @@ Plus Check removes the uncertainty and anxiety of finding plus-size friendly sea
 
 ## Structure
 
-- `backend/`: Node.js + Express API
+- `backend/`: Node.js + Express API (uses `sql.js` for cross-platform SQLite support)
 - `frontend/`: React + Vite frontend
 
 ## Setup

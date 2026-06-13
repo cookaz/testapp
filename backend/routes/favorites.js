@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../db');
+const { api: db } = require('../db');
 const { authenticateToken } = require('../middleware/auth');
 
 router.get('/', authenticateToken, (req, res) => {

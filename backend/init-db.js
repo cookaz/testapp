@@ -1,17 +1,18 @@
-const Database = require('better-sqlite3');
+const { initDb, api: db } = require('./db');
 const path = require('path');
 const fs = require('fs');
 
 const dbPath = path.join(__dirname, 'pluscheck.db');
 
-// Delete existing database if it exists (for fresh start during development)
-if (fs.existsSync(dbPath)) {
-  fs.unlinkSync(dbPath);
-}
+(async () => {
+  // Delete existing database if it exists (for fresh start during development)
+  if (fs.existsSync(dbPath)) {
+    fs.unlinkSync(dbPath);
+  }
 
-const db = new Database(dbPath);
+  await initDb();
 
-db.exec(`
+  db.exec(`
 CREATE TABLE users (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
@@ -135,7 +136,8 @@ CREATE TABLE business_claims (
   FOREIGN KEY (business_id) REFERENCES businesses(id),
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
-`);
+  `);
 
-console.log('Database initialized.');
-db.close();
+  console.log('Database initialized.');
+  db.close();
+})();

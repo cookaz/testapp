@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const { initDb } = require('./db');
 
 const authRoutes = require('./routes/auth');
 const businessRoutes = require('./routes/businesses');
@@ -25,6 +26,14 @@ app.use('/api/favorites', favoriteRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/photos', photoRoutes);
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on port ${PORT}`);
+async function main() {
+  await initDb();
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+main().catch(err => {
+  console.error(err);
+  process.exit(1);
 });
